@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Form</h1>
+    email: <input type="email" id="em"><br>
+    password: <input type="password" id="pass"><br>
+    <button onclick="takeemail()">Submit</button>
+    <div id="xy"></div>
+    <hr>
+</body>
+<script>
+function takeemail() {
+    let email = document.getElementById('em').value;
+    let password = document.getElementById('pass').value;
+    document.getElementById('xy').innerHTML = "Email is: " + email + "<br>Password is: " + password;
+}
+</script>
+</html>
