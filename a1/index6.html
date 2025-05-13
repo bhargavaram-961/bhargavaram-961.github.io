@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+     number 1: <input type="number" id="em"><br>
+     number 2: <input type="number" id="pass"><br>
+    <button onclick="sum(),sub(),mul(),div()">Submit</button>
+    <div id="xy"></div>
+    <div id="xy1"></div>
+    <div id="xy2"></div>
+    <div id="xy3"></div>
+    <hr>
+</body>
+<script>
+function sum() {
+    let x = document.getElementById('em').value;
+    let y = document.getElementById('pass').value;
+    document.getElementById('xy').innerHTML = "<br>Addition is:" + (x+y) }
+    function sub() {
+    let x = document.getElementById('em').value;
+    let y = document.getElementById('pass').value;
+    document.getElementById('xy1').innerHTML = "<br>subtraction is:" + (x-y) }
+        function mul() {
+    let x = document.getElementById('em').value;
+    let y = document.getElementById('pass').value;
+    document.getElementById('xy2').innerHTML = "<br>product is:" + (x*y) }
+        function div() {
+    let x = document.getElementById('em').value;
+    let y = document.getElementById('pass').value;
+    document.getElementById('xy3').innerHTML = "<br>division is:" + (x/y) }
+</script>
+</body>
+</html>
