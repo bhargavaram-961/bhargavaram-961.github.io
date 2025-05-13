@@ -17,21 +17,34 @@
 </body>
 <script>
 function sum() {
-    let x = document.getElementById('em').value;
-    let y = document.getElementById('pass').value;
-    document.getElementById('xy').innerHTML = "<br>Addition is:" + (x+y) }
-    function sub() {
-    let x = document.getElementById('em').value;
-    let y = document.getElementById('pass').value;
-    document.getElementById('xy1').innerHTML = "<br>subtraction is:" + (x-y) }
-        function mul() {
-    let x = document.getElementById('em').value;
-    let y = document.getElementById('pass').value;
-    document.getElementById('xy2').innerHTML = "<br>product is:" + (x*y) }
-        function div() {
-    let x = document.getElementById('em').value;
-    let y = document.getElementById('pass').value;
-    document.getElementById('xy3').innerHTML = "<br>division is:" + (x/y) }
+    let x = parseFloat(document.getElementById('em').value);
+    let y = parseFloat(document.getElementById('pass').value);
+    document.getElementById('xy').innerHTML = "<br>Addition is: " + (x + y);
+}
+
+function sub() {
+    let x = parseFloat(document.getElementById('em').value);
+    let y = parseFloat(document.getElementById('pass').value);
+    document.getElementById('xy1').innerHTML = "<br>Subtraction is: " + (x - y);
+}
+
+function mul() {
+    let x = parseFloat(document.getElementById('em').value);
+    let y = parseFloat(document.getElementById('pass').value);
+    document.getElementById('xy2').innerHTML = "<br>Product is: " + (x * y);
+}
+
+function div() {
+    let x = parseFloat(document.getElementById('em').value);
+    let y = parseFloat(document.getElementById('pass').value);
+    if (y === 0) {
+        document.getElementById('xy3').innerHTML = "<br>Division by zero is not allowed.";
+    } else {
+        document.getElementById('xy3').innerHTML = "<br>Division is: " + (x / y);
+    }
+}
 </script>
+
+
 </body>
 </html>
