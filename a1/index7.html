@@ -4,57 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-   
-    </style>
 </head>
 <body>
-    <div class="container"><div class="bhar">
-     number 1: <input type="number" id="em"><br>
-     number 2: <input type="number" id="pass"><br>
-    <button onclick="div()">/</button>
-    <button onclick="mul()">*</button>
-    <button onclick="sub()">-</button>
-    <button onclick="sum()">+</button>
+    <h2>ASSIGNMENT-9</h2>
+     <div class="container">
+    <div class="input-group">
+        <input type="text" id="n1" placeholder="Enter the first number :"><br><br>
+        <input type="text" id="n2" placeholder="Enter the second number :"><br><br>
+        <button onclick="add()">+</button>
+        <button onclick="sub()">-</button>
+        <button onclick="mul()">*</button>
+        <button onclick="div()">/</button>
     </div>
-    <div class="ta">
-    <div id="xy"></div>
-    <div id="xy1"></div>
-    <div id="xy2"></div>
-    <div id="xy3"></div>
+    <div class="result">
+        <div id="res"></div>
     </div>
-    <hr>
-    </div>
-  
-</body>
-<script>
-function sum() {
-    let x = parseFloat(document.getElementById('em').value);
-    let y = parseFloat(document.getElementById('pass').value);
-    document.getElementById('xy').innerHTML = "<br>Addition is: " + (x + y);
-}
-
-function sub() {
-    let x = parseFloat(document.getElementById('em').value);
-    let y = parseFloat(document.getElementById('pass').value);
-    document.getElementById('xy1').innerHTML = "<br>Subtraction is: " + (x - y);
-}
-
-function mul() {
-    let x = parseFloat(document.getElementById('em').value);
-    let y = parseFloat(document.getElementById('pass').value);
-    document.getElementById('xy2').innerHTML = "<br>Product is: " + (x * y);
-}
-
-function div() {
-    let x = parseFloat(document.getElementById('em').value);
-    let y = parseFloat(document.getElementById('pass').value);
-         document.getElementById('xy3').innerHTML = "<br>Division is: " + (x / y);
-    
-}
-</script>
-
-
-
+  </div>
+    <script>
+        const add=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Addition: " +(a+b);
+        }
+        const sub=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Subtraction: " +(a-b);
+        }
+        const mul=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Multiplication: " +(a*b);
+        }
+        const div=()=>{
+            let a=parseFloat(document.getElementById('n1').value);
+            let b=parseFloat(document.getElementById('n2').value);
+            document.getElementById("res").innerHTML="Divivsion: " +(a/b);
+        }
+    </script>
 </body>
 </html>
