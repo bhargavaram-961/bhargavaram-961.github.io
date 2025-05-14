@@ -4,16 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            justify-content: flex-start;
+            align-items: flex-start;
+            margin:30px;
+            gap: 20px;
+        }
+    </style>
 </head>
 <body>
+    <div class="container"><div class="bhar">
      number 1: <input type="number" id="em"><br>
      number 2: <input type="number" id="pass"><br>
     <button onclick="sum(),sub(),mul(),div()">Submit</button>
+    </div>
+    <div class="ta">
     <div id="xy"></div>
     <div id="xy1"></div>
     <div id="xy2"></div>
     <div id="xy3"></div>
+    </div>
     <hr>
+    </div>
+  
 </body>
 <script>
 function sum() {
@@ -41,6 +57,7 @@ function div() {
     
 }
 </script>
+
 
 
 </body>
