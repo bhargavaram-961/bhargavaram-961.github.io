@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container
+        {
+            display: flex;
+            gap: 30px;
+        }
+        .box
+        {
+            border: 2px solid black;
+            border-radius: 10px;
+            width: 200px;
+            text-align: center;
+            padding: 10px;
+        }
+        .box:hover
+        {
+            transform: scale(0.9);
+        }
+        .box img
+        {
+            width: 50%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 5px;
+        }
+        .input
+        {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        .input input {
+            padding: 10px;
+        }
+        .input button {
+            padding: 5px 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Handling array of objects</h2>
+        <div class="input">
+        <input type="number" id="id" placeholder="Give id">
+        <input type="text" id="name" placeholder="Give name">
+        <input type="number" id="price" placeholder="Give price">
+        <input type="text" id="imgURL" placeholder="Image URL">
+        <button onclick="add()">Add</button>
+        </div>
+    <div class="container" id="boxes"></div>
+    <script>
+        // const stu={id:1,"name":"tarun","city":"Bang"}
+        // console.log(stu);
+        // console.log(stu.name);
+        // console.log(stu["city"]);
+
+        // delete stu.city
+        // console.log(stu);
+
+        // for(let key in stu)
+        // {
+        //     console.log(stu[key]);
+        // }
+
+        // Object.entries(stu).forEach(([key,value])=>console.log(key+":"+value))
+
+        const prod=[{id:1,"name":"apple",price:50,imgURL:"apple.jpg"},{id:2,"name":"mango",price:100,imgURL:"mango.jpg"},{id:3,"name":"orange",price:150,imgURL:"orange.jpg"}]
+        const x=document.getElementById("boxes");
+        function disp()
+        {
+            x.innerHTML="";
+            prod.forEach(value=>{
+            x.innerHTML+=`<div class="box">
+                            <img src="${value.imgURL}">
+                            <h4>${value.name}</h4>
+                            <h4>$${value.price}<button onClick="del(${value.id})">Delete</button></h4>
+                        </div>`;
+        });
+        }
+            function add()
+            {
+            const id=document.getElementById("id").value;
+            const name=document.getElementById("name").value;
+            const price=document.getElementById("price").value;
+            const imgURL=document.getElementById("imgURL").value;
+            if (id&&name&&price&&imgURL) {
+                prod.push({id:parseInt(id),name,price:parseFloat(price),imgURL});
+                disp();
+            }
+            }
+
+            function del(id) {
+            const newproduct=[];
+            for (let i=0;i<prod.length;i++) 
+            {
+                if(prod[i].id!==id) 
+                {
+                newproduct.push(prod[i]);
+                }
+            }
+            prod.length = 0;
+            for(let i=0;i<newproduct.length; i++) {
+                prod.push(newproduct[i]);
+            }
+    disp();
+}
+
+            disp();
+    </script>
+</body>
+</html>
