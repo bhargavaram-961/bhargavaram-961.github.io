@@ -1,114 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bhargava Ram - MERN Stack Developer</title>
-    <style>
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0;
-            padding: 0;
-            background: #f9f9f9;
-            color: #333;
-        }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bhargava Ram - MERN Stack Developer</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
 
-        header {
-            background: #4a90e2;
-            color: white;
-            padding: 2rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: linear-gradient(to right, #eef2f3, #ffffff);
+      color: #333;
+      transition: background 0.3s ease;
+    }
 
-        header h1 {
-            margin: 0;
-            font-size: 2.5rem;
-        }
+    header {
+      background: #4a90e2;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+      animation: fadeInDown 0.8s ease-in-out;
+    }
 
-        header h2 {
-            margin-top: 0.5rem;
-            font-weight: 300;
-        }
+    @keyframes fadeInDown {
+      from {
+        opacity: 0;
+        transform: translateY(-30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
 
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 2rem;
-            background: white;
-            border-radius: 10px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
-        }
+    header h1 {
+      margin: 0;
+      font-size: 2.8rem;
+      letter-spacing: 1px;
+    }
 
-        h3 {
-            border-bottom: 2px solid #4a90e2;
-            padding-bottom: 0.5rem;
-            color: #4a90e2;
-        }
+    header h2 {
+      margin-top: 0.5rem;
+      font-weight: 300;
+      font-size: 1.4rem;
+    }
 
-        ol {
-            padding-left: 1.5rem;
-        }
+    main {
+      max-width: 850px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+      animation: fadeIn 1s ease-in;
+    }
 
-        li {
-            margin-bottom: 0.5rem;
-        }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: scale(0.97);
+      }
+      to {
+        opacity: 1;
+        transform: scale(1);
+      }
+    }
 
-        a {
-            text-decoration: none;
-            color: #0077cc;
-            transition: color 0.2s ease;
-        }
+    h3 {
+      border-bottom: 3px solid #4a90e2;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      color: #4a90e2;
+      font-size: 1.5rem;
+    }
 
-        a:hover {
-            color: #005fa3;
-            text-decoration: underline;
-        }
+    ol {
+      padding-left: 1.5rem;
+    }
 
-        hr {
-            border: none;
-            border-top: 1px solid #ddd;
-            margin: 2rem 0;
-        }
-    </style>
+    li {
+      margin-bottom: 0.75rem;
+      list-style-type: decimal-leading-zero;
+    }
+
+    a {
+      display: inline-block;
+      background-color: #f0f4ff;
+      color: #0077cc;
+      padding: 0.5rem 0.8rem;
+      border-radius: 6px;
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0, 119, 204, 0.1);
+    }
+
+    a:hover {
+      color: #ffffff;
+      background-color: #0077cc;
+      text-decoration: none;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 10px rgba(0, 119, 204, 0.2);
+    }
+
+    hr {
+      border: none;
+      border-top: 2px dashed #ddd;
+      margin: 2.5rem 0;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+      }
+
+      header h2 {
+        font-size: 1.1rem;
+      }
+
+      main {
+        padding: 1.2rem;
+      }
+
+      a {
+        padding: 0.4rem 0.6rem;
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <h1>Bhargava Ram</h1>
-        <h2>MERN Stack Developer</h2>
-    </header>
+  <header>
+    <h1>Bhargava Ram</h1>
+    <h2>MERN Stack Developer</h2>
+  </header>
 
-    <main>
-        <h3>My Projects</h3>
-        <ol>
-            <li><a href="p1/">MyPortfolio</a></li>
-            <li><a href="https://react-lessons-ten.vercel.app/">React-lesson</a></li>
-            <li><a href="/p4/index.html">My portfolio</a></li>
-            <li><a href="https://gcet-node-app.vercel.app">Node-App</a></li>
-        </ol>
+  <main>
+    <h3>My Projects</h3>
+    <ol>
+      <li><a href="p1/">MyPortfolio</a></li>
+      <li><a href="https://react-lessons-ten.vercel.app/">React-lesson</a></li>
+      <li><a href="/p4/index.html">My portfolio</a></li>
+      <li><a href="https://gcet-node-app.vercel.app">Node-App</a></li>
+    </ol>
 
-        <hr>
+    <hr />
 
-        <h3>My Assignments</h3>
-        <ol>
-            <li><a href="a1/index.html">Assignment 1</a></li>
-            <li><a href="a1/index1.html">Assignment 2</a></li>
-            <li><a href="a1/index2.html">Assignment 3</a></li>
-            <li><a href="a1/index3.html">Assignment 4</a></li>
-            <li><a href="a1/index4.html">Assignment 5</a></li>
-            <li><a href="a1/index5.html">Assignment 6</a></li>
-            <li><a href="a1/index6.html">Assignment 7</a></li>
-            <li><a href="a1/index7.html">Assignment 8</a></li>
-            <li><a href="a1/index8.html">Assignment 9</a></li>
-            <li><a href="a1/index9.html">Assignment 10</a></li>
-            <li><a href="a1/index10.html">Assignment 11</a></li>
-            <li><a href="a1/index11.html">Assignment 12</a></li>
-            <li><a href="a1/index12.html">Assignment 13</a></li>
-            <li><a href="a1/index13.html">Assignment 14</a></li>
-            <li><a href="a1/index14.html">Assignment 15</a></li>
-            <li><a href="a1/index15.html">Assignment 16</a></li>
-            <li><a href="a1/index16.html">Assignment 17</a></li>
-        </ol>
-    </main>
+    <h3>My Assignments</h3>
+    <ol>
+      <li><a href="a1/index.html">Assignment 1</a></li>
+      <li><a href="a1/index1.html">Assignment 2</a></li>
+      <li><a href="a1/index2.html">Assignment 3</a></li>
+      <li><a href="a1/index3.html">Assignment 4</a></li>
+      <li><a href="a1/index4.html">Assignment 5</a></li>
+      <li><a href="a1/index5.html">Assignment 6</a></li>
+      <li><a href="a1/index6.html">Assignment 7</a></li>
+      <li><a href="a1/index7.html">Assignment 8</a></li>
+      <li><a href="a1/index8.html">Assignment 9</a></li>
+      <li><a href="a1/index9.html">Assignment 10</a></li>
+      <li><a href="a1/index10.html">Assignment 11</a></li>
+      <li><a href="a1/index11.html">Assignment 12</a></li>
+      <li><a href="a1/index12.html">Assignment 13</a></li>
+      <li><a href="a1/index13.html">Assignment 14</a></li>
+      <li><a href="a1/index14.html">Assignment 15</a></li>
+      <li><a href="a1/index15.html">Assignment 16</a></li>
+      <li><a href="a1/index16.html">Assignment 17</a></li>
+    </ol>
+  </main>
 </body>
 </html>
